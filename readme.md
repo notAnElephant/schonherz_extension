@@ -14,5 +14,6 @@ and click on the extension icon to autofill the form.
 
 # Improvements
 
+- [ ] Add the button into the page itself (currently, it is in the extension popup)
 - [ ] Add a settings page to set the default pages (currently, the schedule is hardcoded)
-- [ ] Add an option to run different methods from content.js, as now the whole file is executed
+- [ ] Add an option to run different methods from content.js (currently, the whole file is executed)
