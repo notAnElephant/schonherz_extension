@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Schönherz Iskolaszövetkezet Jelenlétiív-kitöltő",
+  "version": "1.0",
+  "description": "Kitölti a jelenléti ívedet a Schönherz Iskolaszövetkezet oldalán.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://schonherz.hu/"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://schonherz.hu/"],
+      "js": ["content.js"]
+    }
+  ]
+}
