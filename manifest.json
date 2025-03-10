@@ -3,15 +3,34 @@
   "name": "Schönherz Iskolaszövetkezet Jelenlétiív-kitöltő",
   "version": "1.0",
   "description": "Kitölti a jelenléti ívedet a Schönherz Iskolaszövetkezet oldalán.",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["https://schonherz.hu/"],
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "identity"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://schonherz.hu/"
+  ],
+  "oauth2": {
+    "client_id": "682758846325-vu803e91rdctgfpsmucgnvhr0hqmfiu8.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly"
+    ]
+  },
   "action": {
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "matches": ["https://schonherz.hu/"],
-      "js": ["content.js"]
+      "matches": [
+        "https://schonherz.hu/"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ]
 }
